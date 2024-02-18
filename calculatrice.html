@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculatrice</title>
+  <style>
+    #screen {
+      width: 200px;
+      margin-bottom: 10px;
+    }
+
+    .btn-pt {
+      width: 40px;
+      height: 40px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div id="screen"></div>
+  <button class="btn-pt" onclick="appendToScreen('1')">1</button>
+  <button class="btn-pt" onclick="appendToScreen('2')">2</button>
+  <button class="btn-pt" onclick="appendToScreen('3')">3</button>
+  <button class="btn-pt" onclick="appendToScreen('+')">+</button>
+  <br>
+  <button class="btn-pt" onclick="appendToScreen('4')">4</button>
+  <button class="btn-pt" onclick="appendToScreen('5')">5</button>
+  <button class="btn-pt" onclick="appendToScreen('6')">6</button>
+  <button class="btn-pt" onclick="appendToScreen('-')">-</button>
+  <br>
+  <button class="btn-pt" onclick="appendToScreen('7')">7</button>
+  <button class="btn-pt" onclick="appendToScreen('8')">8</button>
+  <button class="btn-pt" onclick="appendToScreen('9')">9</button>
+  <button class="btn-pt" onclick="appendToScreen('*')">*</button>
+  <br>
+  <button class="btn-pt" onclick="appendToScreen('0')">0</button>
+  <button class="btn-pt" onclick="appendToScreen('.')">.</button>
+  <button class="btn-pt" onclick="clearScreen()">C</button>
+  <button class="btn-pt" onclick="calculateResult()">=</button>
+
+  <script>
+    const screen = document.getElementById("screen");
+    let expression = "";
+
+    function appendToScreen(value) {
+      expression += value;
+      screen.textContent = expression;
+    }
+
+    function clearScreen() {
+      expression = "";
+      screen.textContent = "";
+    }
+
+    function calculateResult() {
+      try {
+        const result = eval(expression);
+        screen.textContent = result;
+        expression = result.toString();
+      } catch (error) {
+        screen.textContent = "Erreur";
+        expression = "";
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+body {
+    background-color: lightgray; //Pour mettre le background color du body light gris= gris clair
+}
+/* la section est le container de l'écran et les bouttons */
+ body section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 240px;
+    height:400px;
+    margin: 100px;
+    margin-left: 480px;
+    border-radius: 15px;
+ }
+/* div de l'écran ou le résultat sera affiché */
+ body section #screen {
+    width: 200px;
+    height: 100px;
+    background-color: #AED4E6;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding:5px;
+ }
+/* div container des btns */
+ body section #btn {
+    display: flex;
+    flex-wrap: wrap;
+    margin : 15px;
+ }
+/* la mise en forme de la classe btns qui va changer par la suite
+ la taille et l'hauteur, la bordure ,le margin de chaque boutton */
+ body section #btn .btn-pt {
+    width: 50px;
+    height: 50px;
+    margin: 1px;
+    border:none;
+    border-radius: 5px;
+ }
+/* changement de couleur du bouton reset */
+ body section #btn #btn_c {
+    background-color: #E68B0C;
+ }
+ /* changement de couleur du bouton reset lors d'un clic */
+ body section #btn #btn_c:hover {
+    background-color: #f2d2a5;
+ }
+/* changement de couleur du bouton égal(=)*/
+ body section #btn #btn-egal {
+    background-color: #22E305;
+    border-radius: 5px;
+    border: none;
+    margin: 1px;
+    width: 100px;
+ }
+ /* changement de couleur du bouton égal(=) lors d'un clic*/
+ body section #btn #btn-egal:hover {
+    background-color: #b9f5af;
+ }
+ body section #btn .btn-gd {
+    width: 100px;
+    height: 50px;
+ }

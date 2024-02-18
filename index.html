@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+</head>
+<body>
+      <section>
+        <!-- L'écran d'affichage -->
+            <div id="screen"></div>
+        <!--Les bouttons de chiffres et les opérateurs-->
+            <div id="btn">
+                <!-- Crétion des bouttons de calcul -->
+                <!-- data-key c'est la valeur de code de key sur le site keycode info 
+                les attributs de data servent à attacher une valeurà un élément du code html-->
+                <button type="button" onclick="clearScreen()" data-key="8" id="btn_c" class="btn-pt">C</button> 
+                <button type="button" onclick="appendToScreen('(')" data-key="53" class="btn-pt">(</button>
+                <button type="button" onclick="appendToScreen(')')" data-key="219" class="btn-pt">)</button>
+                <button type="button" onclick="appendToScreen('/')" data-key="191" class="btn-pt">/</button>
+                <button type="button" onclick="appendToScreen('7')" data-key="55" class="btn-pt">7</button>
+                <button type="button" onclick="appendToScreen('8')" data-key="56" class="btn-pt">8</button>
+                <button type="button" onclick="appendToScreen('9')" data-key="57" class="btn-pt">9</button>
+                <button type="button" onclick="appendToScreen('*')" data-key="220" class="btn-pt">*</button>
+                <button type="button" onclick="appendToScreen('4')" data-key="52" class="btn-pt">4</button>
+                <button type="button" onclick="appendToScreen('5')" data-key="53" class="btn-pt">5</button>
+                <button type="button" onclick="appendToScreen('6')" data-key="54" class="btn-pt">6</button>
+                <button type="button" onclick="appendToScreen('-')" data-key="54" class="btn-pt">-</button>
+                <button type="button" onclick="appendToScreen('1')" data-key="49" class="btn-pt">1</button>
+                <button type="button" onclick="appendToScreen('2')" data-key="50" class="btn-pt">2</button>
+                <button type="button" onclick="appendToScreen('3')" data-key="51" class="btn-pt">3</button>
+                <button type="button" onclick="appendToScreen('+')" data-key="187" class="btn-pt">+</button>
+                <button type="button" onclick="appendToScreen('0')" data-key="48" class="btn-pt">0</button>
+                <button type="button" onclick="appendToScreen('.')" data-key="190" class="btn-pt">.</button>
+                <button type="button" onclick="calculateResult()" id="btn-egal" data-key="187" class="btn-pt">=</button>
+            </div> onclick="appendToScreen('1')"
+        </section>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
